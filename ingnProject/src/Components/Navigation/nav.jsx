@@ -1,12 +1,14 @@
 
 import React from 'react';
 import style from '../Navigation/nav.module.scss'
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   return (
     <nav className ={style.topnavigation}>
       <ul>
-        <li><a href="/">Home</a></li>
+      <Link to="/" className={style.logo}>INGN</Link> 
+        {/* <li><a href="/">Home</a></li> */}
         <li><a href="/allpages">Alle</a></li>
         <li><a href="/national">Indland</a></li>
         <li><a href="/International">Udland</a></li>

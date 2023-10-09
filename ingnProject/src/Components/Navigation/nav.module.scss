@@ -1,31 +1,64 @@
 .topnavigation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #333; 
-    color: #fff; 
-    padding: 10px 0; 
-    z-index: 1000; /* Adjust the z-index as needed */
-  }
-  
-  .topnavigation ul {
-    list-style: none; 
-    display: flex; 
-    justify-content: space-around; 
-  }
-  
-  .topnavigation ul li {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .topnavigation ul li a {
-    text-decoration: none;
-    color: #fff; 
-  }
-  
-  .topnavigation ul li a:hover {
-    text-decoration: underline;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  // padding: 10px;
+  z-index: 1000;
+  display: center;
+  align-items: center; 
+}
+
+.topnavigation ul {
+  list-style: none;
+  display: flex;
+  margin: 0 auto; 
+  padding: 0;
+  align-items: center; 
+}
+
+.topnavigation ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.topnavigation ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px; 
+  margin: 0 10px;
+  position: relative; 
+  padding-right: 10px; 
+}
+
+.topnavigation ul li a:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: #fff; 
+  top: 0;
+  right: 0;
+}
+
+.topnavigation ul li:last-child a {
+  margin-right: 0; 
+}
+
+.topnavigation ul li a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  text-decoration: none;
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+  display: left;
+  align-items: center; 
+  // margin-right: 60px; /* Push the logo to the left */
+}
+
+
