@@ -1,12 +1,12 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import style from '../../Pages/HomePage/homePage.module.scss';
+// import style from '../../Pages/HomePage/homePage.module.scss';
 
-const Homepage = () => {
+const AllPages = () => {
   return (
-    <div className={style.HomepageContainer}>
-      <h2>Homepage is here</h2>
+    <div>
+      <h2>Allpages is right here</h2>
   
 
       {/* <h3>
@@ -18,4 +18,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default AllPages;
