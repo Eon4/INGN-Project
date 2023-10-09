@@ -1,3 +1,5 @@
+
+
 .topnavigation {
   position: fixed;
   top: 0;
@@ -27,6 +29,7 @@
 .topnavigation ul li a {
   text-decoration: none;
   color: #fff;
+  font-family: var(--FontRoboto);
   font-size: 24px; 
   margin: 0 10px;
   position: relative; 
@@ -53,7 +56,8 @@
 
 .logo {
   text-decoration: none;
-  color: #fff;
+  color: #a20808;
+  font-family: sans-serif;
   font-size: 48px;
   font-weight: bold;
   display: left;
