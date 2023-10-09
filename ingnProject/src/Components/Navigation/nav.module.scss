@@ -1,10 +1,12 @@
-
-
-
 .topnavigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: #333; 
     color: #fff; 
     padding: 10px 0; 
+    z-index: 1000; /* Adjust the z-index as needed */
   }
   
   .topnavigation ul {
