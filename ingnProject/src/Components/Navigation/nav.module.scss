@@ -5,12 +5,15 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--Snow);
+  // color: #fff;
   // padding: 10px;
   z-index: 1000;
-  display: center;
+  // display: center;
   align-items: center; 
+
+  display: flex;
+  justify-content: center;
 }
 
 .topnavigation ul {
@@ -28,12 +31,15 @@
 
 .topnavigation ul li a {
   text-decoration: none;
-  color: #fff;
+  // color: #fff;
   font-family: var(--FontRoboto);
   font-size: 24px; 
   margin: 0 1px;
   position: relative; 
   padding-right: 10px; 
+
+  color: var(--Black);
+  padding-left: 20px;
 }
 
 .topnavigation ul li a:before {
@@ -41,7 +47,7 @@
   position: absolute;
   height: 100%;
   width: 1px;
-  background-color: #fff; 
+  background-color:var(--Black);
   top: 0;
   right: 0;
 }
@@ -63,6 +69,7 @@
   display: left;
   align-items: center; 
   // margin-right: 60px; /* Push the logo to the left */
+  margin-left: 5px
 }
 
 

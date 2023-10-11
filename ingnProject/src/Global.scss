@@ -1,5 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Flex:opsz@8..144&display=swap");
 
 :root {
-    --FontRoboto: 'Roboto Flex', sans-serif;
+
+  //Colors for all:
+  --Grey: #f6f3f3;
+  --Snow: #ffffff;
+  --Black: #000000;
+  --Red: #c52525;
+
+  //Fonts for all
+  --logoFont: "Righteous", cursive;
+  --FontRoboto: "Roboto Flex", sans-serif;
+
+  
 }
