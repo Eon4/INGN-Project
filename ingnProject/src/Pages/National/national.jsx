@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import { getNational } from '../../Queries/National';
 import { request } from "graphql-request";
-import style from '../../Pages/HomePage/homePage.module.scss';
+import style from '../../Pages/National/national.module.scss';
 
 export const National = () => {
 
@@ -23,26 +23,46 @@ export const National = () => {
     return <p>Error: {error.message}</p>;
   }
 
-  if (!data) {
-    return <p>Data is undefined</p>; 
+  if (!data || !data.artikler) {
+    return <p>Data is not available.</p>;
   }
-  
+
 
   return (
-    <>
-      {data.artikler.map((item, index) => {
+    <section className={style.articleWrapper}>
+      {data.artikler.slice(0, 9).map((item, index) => {
+        const classNames = [
+          style.art1,
+          style.art2,
+          style.art3,
+          style.art4,
+          style.art5,
+          style.art6,
+          style.art7,
+          style.art8,
+          style.art9,
+        ];
+
+        const className = classNames[index % classNames.length];
+
         return (
-          <article key={index}>
-            <h2>{item.articleTitle}</h2>
-            <p>
-              D. {item.date} - af {item.author}
-            </p>
+          <article
+            key={index}
+            className={className}
+            style={{ gridArea: "article" + (index + 1) }}
+          >
+            <div>
+              <h2>{item.articleTitle}</h2>
+              <p>
+                D. {item.date} - af {item.author}
+              </p>
+              <Link to={`/${item.id}`}>Læs mere</Link>
+            </div>
             <img src={item.image.url} alt={item.descriptionOfImage} />
-            <Link to={`/${item.id}`}>Læs mere</Link>
           </article>
         );
       })}
-    </>
+    </section>
   );
 };
 
