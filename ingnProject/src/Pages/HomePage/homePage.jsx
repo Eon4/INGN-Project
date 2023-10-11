@@ -7,13 +7,6 @@ const Homepage = () => {
   return (
     <div className={style.HomepageContainer}>
       <h2>Homepage is here</h2>
-  
-
-      {/* <h3>
-        <Link to="/blogPage" className={style.LatestArticlesLink}>
-          Latest Blogs
-        </Link>
-      </h3> */}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import { getNational } from '../../Queries/National';
 import { request } from "graphql-request";
-// import style from '../../Pages/HomePage/homePage.module.scss';
+import style from '../../Pages/HomePage/homePage.module.scss';
 
 export const National = () => {
 

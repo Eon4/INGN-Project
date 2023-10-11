@@ -7,7 +7,7 @@ const Navigation = () => {
   return (
     <nav className ={style.topnavigation}>
       <ul>
-      <Link to="/" className={style.logo}>INGN</Link> 
+      <Link to="/allpages" className={style.logo}>INGN</Link> 
         {/* <li><a href="/">Home</a></li> */}
         <li><a href="/allpages">Alle</a></li>
         <li><a href="/national">Indland</a></li>
