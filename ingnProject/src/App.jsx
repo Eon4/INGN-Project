@@ -11,6 +11,8 @@ import Technology from './Pages/Technology/technology';
 import Sport from './Pages/Sport/sport';
 import Politics from './Pages/Politics/politics';
 import Society from './Pages/Society/society';
+import { OneArticle } from "./Pages/ArticlePage/OneArticlePage";
+
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => {
               <Route path="/sport" element={<Sport />} />
              <Route path="/politics" element={<Politics />} />
             <Route path="/society" element={<Society />} />
+            <Route path="/article/:id" element={<OneArticle />} />
+
           </Route>
         </Routes>
       </BrowserRouter>

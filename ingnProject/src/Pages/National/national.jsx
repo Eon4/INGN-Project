@@ -56,7 +56,7 @@ export const National = () => {
               <p>
                 D. {item.date} - af {item.author}
               </p>
-              <Link to={`/${item.id}`}>Læs mere</Link>
+              <Link to={`/article/${item.id}`}>Læs mere</Link>
             </div>
             <img src={item.image.url} alt={item.descriptionOfImage} />
           </article>
