@@ -1,7 +1,6 @@
-
-export const getInternational = `
+export const getPolitics = `
 query MyArticles {
-    artikler(where: {category_contains_all: "International"}) {
+    artikler(where: {category_contains_all: "Politics"}) {
         id
       articleTitle
       date

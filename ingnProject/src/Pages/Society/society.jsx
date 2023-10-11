@@ -1,6 +1,8 @@
-import React from 'react';
+import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
-// import style from '../../Pages/HomePage/homePage.module.scss';
+import { getSociety } from '../../Queries/Society';
+import { request } from "graphql-request";
+import style from '../../Pages/Society/society.module.scss';
 
 const Society = () => {
   return (
