@@ -5,7 +5,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: var(--snowWhite);
+    background-color: var(--Snow);
     .footer {
       max-width: 1230px;
       display: grid;
@@ -21,13 +21,18 @@ footer {
       h4 {
         font-size: 1rem;
         padding-bottom: 23px;
+        font-family: var(--FontRoboto);
       }
       p {
         font-size: 1rem;
+        font-family: var(--FontRoboto);
+        color: var(--Black);
+
+
       }
       a {
         text-decoration: none;
-        color: var(--blackEye);
+        
       }
     }
   }

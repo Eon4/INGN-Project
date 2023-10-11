@@ -11,7 +11,6 @@
   z-index: 1000;
   // display: center;
   align-items: center; 
-
   display: flex;
   justify-content: center;
 }
@@ -34,7 +33,7 @@
   // color: #fff;
   font-family: var(--FontRoboto);
   font-size: 24px; 
-  margin: 0 1px;
+  // margin: 0 1px;
   position: relative; 
   padding-right: 10px; 
 
@@ -50,6 +49,7 @@
   background-color:var(--Black);
   top: 0;
   right: 0;
+  
 }
 
 .topnavigation ul li:last-child a {
@@ -69,7 +69,7 @@
   display: left;
   align-items: center; 
   // margin-right: 60px; /* Push the logo to the left */
-  margin-left: 5px
+  margin-left: 5px;
 }
 
 
