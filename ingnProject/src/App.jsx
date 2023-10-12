@@ -22,19 +22,18 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/"
-            element={<MainLayout />}>
-            <Route index element={<AllPages />} />
-             <Route path="/allpages" element={<AllPages />} />
-              <Route path="/national" element={<National />} />
-               <Route path="/international" element={<International />} />
-               <Route path="/technology" element={<Technology />} />
-              <Route path="/sport" element={<Sport />} />
-             <Route path="/politics" element={<Politics />} />
-            <Route path="/society" element={<Society />} />
-            <Route path="/article/:id" element={<OneArticle />} />
+             path="/"
+              element={<MainLayout />}>
+              <Route index element={<AllPages />} />
+               <Route path="/allpages" element={<AllPages />} />
+                <Route path="/national" element={<National />} />
+                 <Route path="/international" element={<International />} />
+                  <Route path="/technology" element={<Technology />} />
+                 <Route path="/sport" element={<Sport />} />
+                <Route path="/politics" element={<Politics />} />
+              <Route path="/society" element={<Society />} />
+             <Route path="/article/:id" element={<OneArticle />} />
             <Route path="/*" element={<NotFoundPage />} />
-
           </Route>
         </Routes>
       </BrowserRouter>

@@ -6,7 +6,7 @@ import style from '../../Pages/HomePage/homePage.module.scss';
 const Homepage = () => {
   return (
     <div className={style.HomepageContainer}>
-      <h2>Homepage is here</h2>
+      <h2>Homepage</h2>
     </div>
   );
 };
