@@ -1,3 +1,4 @@
+import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { request } from "graphql-request";
 import { useParams, useNavigate } from "react-router-dom";
@@ -6,7 +7,7 @@ import style from "../../Pages/ArticlePage/oneArticlepage.module.scss";
 
 export const OneArticle = () => {
   const { id } = useParams();
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["giveMeOneArticle", id],
@@ -14,10 +15,15 @@ export const OneArticle = () => {
       request(import.meta.env.VITE_PUBLIC_URL_ID, oneArticle, { id: id }),
   });
 
+  const goBack = () => {
+    // Navigate back to the previous page
+    navigate(-1);
+  };
+
   if (isLoading) {
     return <p>Loading...</p>;
   }
-  console.log(data)
+  console.log(data);
 
   if (error) {
     return <p>Error: {error.message}</p>;
@@ -34,18 +40,24 @@ export const OneArticle = () => {
   }
 
   return (
-    <article className={style.oneArticle}>
-      <img src={article.image.url} alt="" />
-      <div className={style.titleAndDate}>
-        <h2>{article.articleTitle}</h2>
-        <p>
-          D. {article.date} - af {article.author}
-        </p>
-      </div>
-      <section
-        className={style.content}
-        dangerouslySetInnerHTML={{ __html: article.articleContent.text }}
-      />
-    </article>
+    <div>
+      <article className={style.oneArticle}>
+        <img src={article.image.url} alt="" />
+        <div className={style.titleAndDate}>
+          <h2>{article.articleTitle}</h2>
+          <p>
+            D. {article.date} - af {article.author}
+          </p>
+        </div>
+        <section
+          className={style.content}
+          dangerouslySetInnerHTML={{ __html: article.articleContent.text }}
+        />
+        <div>
+        <button  className={style.goBackButton} onClick={goBack}>Gå Tilbage</button>
+        </div>
+      </article>
+    
+    </div>
   );
 };

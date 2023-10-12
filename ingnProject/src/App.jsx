@@ -14,8 +14,6 @@ import Society from './Pages/Society/society';
 import { OneArticle } from "./Pages/ArticlePage/OneArticlePage";
 import  {NotFoundPage}  from "./Pages/NotFoundPage/NotFoundPage";
 
-
-
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -26,7 +24,7 @@ const App = () => {
           <Route
             path="/"
             element={<MainLayout />}>
-            <Route index element={<HomePage />} />
+            <Route index element={<AllPages />} />
              <Route path="/allpages" element={<AllPages />} />
               <Route path="/national" element={<National />} />
                <Route path="/international" element={<International />} />
