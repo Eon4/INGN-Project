@@ -28,7 +28,7 @@ const AllPages = () => {
 
   return (
     <section className={style.articleWrapper}>
-      {data.artikler.slice(0, 9).map((item, index) => {
+      {data.artikler.slice(0, 12).map((item, index) => {
         const classNames = [
           style.art1,
           style.art2,
@@ -39,6 +39,11 @@ const AllPages = () => {
           style.art7,
           style.art8,
           style.art9,
+          style.art10,
+          style.art11,
+          style.art12,
+
+
         ];
 
         const className = classNames[index % classNames.length];

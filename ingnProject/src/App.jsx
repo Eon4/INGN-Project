@@ -12,6 +12,8 @@ import Sport from './Pages/Sport/sport';
 import Politics from './Pages/Politics/politics';
 import Society from './Pages/Society/society';
 import { OneArticle } from "./Pages/ArticlePage/OneArticlePage";
+import  {NotFoundPage}  from "./Pages/NotFoundPage/NotFoundPage";
+
 
 
 const queryClient = new QueryClient();
@@ -33,6 +35,7 @@ const App = () => {
              <Route path="/politics" element={<Politics />} />
             <Route path="/society" element={<Society />} />
             <Route path="/article/:id" element={<OneArticle />} />
+            <Route path="/*" element={<NotFoundPage />} />
 
           </Route>
         </Routes>

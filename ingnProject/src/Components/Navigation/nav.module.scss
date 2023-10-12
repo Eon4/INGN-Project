@@ -56,19 +56,21 @@
 
 .logoContainer {
   @media (max-width: 768px) {
+    display: block !important;
+
   }
 }
 
 .logo {
   text-decoration: none;
-  color: #a20808;
+  color:var(--Red);
   font-family: var(--logoFont);
-  font-size: 48px;
+  font-size: 30px;
   font-weight: bold;
   display: left;
   align-items: center;
-  margin-left: 5px;
-  @media (max-width: 768px) {
-    display: block !important;
-  }
+  margin-left: 20px;
+  // @media (max-width: 768px) {
+  //   display: block !important;
+  // }
 }

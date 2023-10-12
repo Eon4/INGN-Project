@@ -12,7 +12,11 @@
     "article5 article5 article4 article4"
     "article6 article6 article6 article6"
     "article7 article7 article7 article7"
-    "article8 article8 article9 article9";
+    "article8 article8 article9 article9"
+    "article10 article10 article10 article10"
+    "article11 article11 article12 article12";
+
+
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(315px);
   article {
@@ -68,16 +72,15 @@
 // Mobile version 
 $mobile: 500px;
 
-
-  @media screen and (max-width: $mobile) { 
-    .articleWrapper {
-      display: flex;
-      flex-direction: column;
-      .art6 {
-        display: unset;
-        img {
-          width: 100%;
-        }
+@media screen and (max-width: $mobile) { 
+  .articleWrapper {
+    display: flex;
+    flex-direction: column;
+    .art6 {
+      display: unset;
+      img {
+        width: 100%;
       }
     }
   }
+}

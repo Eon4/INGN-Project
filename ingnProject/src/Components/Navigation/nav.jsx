@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
   return (
     <nav className ={style.topnavigation}>
  <div className={style.logoContainer}>
-        <Link to="/allpages" className={style.logo}>INGN</Link>
+       <h1  className={style.logo}>INGN</h1>
       </div>
       <ul>
         {/* <li><a href="/">Home</a></li> */}
