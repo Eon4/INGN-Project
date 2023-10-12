@@ -34,7 +34,7 @@ export const OneArticle = () => {
   }
 
   return (
-    <article>
+    <article className={style.oneArticle}>
       <img src={article.image.url} alt="" />
       <div className={style.titleAndDate}>
         <h2>{article.articleTitle}</h2>

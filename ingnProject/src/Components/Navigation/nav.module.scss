@@ -1,63 +1,62 @@
-
-
 .topnavigation {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: var(--Snow);
-  // color: #fff;
-  // padding: 10px;
   z-index: 1000;
-  // display: center;
-  align-items: center; 
   display: flex;
   justify-content: center;
-}
 
-.topnavigation ul {
-  list-style: none;
-  display: flex;
-  margin: 0 auto; 
-  padding: 0;
-  align-items: center; 
-}
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+  }
 
-.topnavigation ul li {
-  margin: 0;
-  padding: 0;
-}
+  ul li {
+    margin: 0;
+    padding: 0;
+  }
 
-.topnavigation ul li a {
-  text-decoration: none;
-  // color: #fff;
-  font-family: var(--FontRoboto);
-  font-size: 24px; 
-  // margin: 0 1px;
-  position: relative; 
-  padding-right: 10px; 
+  ul li a {
+    text-decoration: none;
+    font-family: var(--FontRoboto);
+    font-size: 24px;
+    position: relative;
+    padding-right: 10px;
+    color: var(--Black);
+    padding-left: 20px;
 
-  color: var(--Black);
-  padding-left: 20px;
-}
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      background-color: var(--Black);
+      top: 0;
+      right: 0;
+    }
+  }
 
-.topnavigation ul li a:before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 1px;
-  background-color:var(--Black);
-  top: 0;
-  right: 0;
+  ul li:last-child a {
+    margin-right: 0;
+  }
+
+  ul li a:hover {
+    text-decoration: underline;
+  }
   
+  @media (max-width: 768px) {
+    display: none; /* Hide the entire navigation in mobile mode */
+  }
 }
 
-.topnavigation ul li:last-child a {
-  margin-right: 0; 
-}
-
-.topnavigation ul li a:hover {
-  text-decoration: underline;
+.logoContainer {
+  @media (max-width: 768px) {
+  }
 }
 
 .logo {
@@ -67,9 +66,9 @@
   font-size: 48px;
   font-weight: bold;
   display: left;
-  align-items: center; 
-  // margin-right: 60px; /* Push the logo to the left */
+  align-items: center;
   margin-left: 5px;
+  @media (max-width: 768px) {
+    display: block !important;
+  }
 }
-
-

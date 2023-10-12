@@ -3,11 +3,12 @@ import React from 'react';
 import style from '../Navigation/nav.module.scss'
 import { Link } from 'react-router-dom';
 
-const Navigation = () => {
+ export const Navigation = () => {
   return (
     <nav className ={style.topnavigation}>
-            <Link to="/allpages" className={style.logo}>INGN</Link> 
-
+ <div className={style.logoContainer}>
+        <Link to="/allpages" className={style.logo}>INGN</Link>
+      </div>
       <ul>
         {/* <li><a href="/">Home</a></li> */}
         <li><a href="/allpages">Alle</a></li>
