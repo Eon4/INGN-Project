@@ -14,6 +14,7 @@ import Society from './Pages/Society/society';
 import { OneArticle } from "./Pages/ArticlePage/OneArticlePage";
 import  {NotFoundPage}  from "./Pages/NotFoundPage/NotFoundPage";
 
+
 const queryClient = new QueryClient();
 
 const App = () => {
