@@ -28,7 +28,8 @@
   }
   
   .burger.open .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg)
+
   }
   
   .burger.open .bar:nth-child(2) {
@@ -72,6 +73,13 @@
   .menu ul li a {
     text-decoration: none;
     color: #000000;
+    font-family: var(--FontRoboto);
+
+  }
+
+  .menu ul li a:hover{
+ background-color: rgb(196, 192, 193);
+
   }
   
   .burgerMenu {
