@@ -2,6 +2,8 @@
 import React from 'react';
 import style from '../Navigation/nav.module.scss'
 import { Link } from 'react-router-dom';
+import AdminIcon from '../AdminLogin/adminIcon';
+
 
  export const Navigation = () => {
   return (
@@ -9,6 +11,7 @@ import { Link } from 'react-router-dom';
  <div className={style.logoContainer}>
        <h1  className={style.logo}>INGN</h1>
       </div>
+
       <ul>
         {/* <li><a href="/">Home</a></li> */}
         <li><a href="/allpages">Alle</a></li>
@@ -19,7 +22,10 @@ import { Link } from 'react-router-dom';
         <li><a href="/politics">Politik</a></li>
         <li><a href="/society">Samfund</a></li>
       </ul>
+      <div className={style.Container}>  <AdminIcon/>
+</div>
     </nav>
+    
   );
 };
 

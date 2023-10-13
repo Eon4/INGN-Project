@@ -1,1 +1,92 @@
 
+.AdminPageContainer {
+    h2{
+        color:var(--Red);
+        font-family: var(--FontRoboto);
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .AdminHeading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .AdminForm {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+  }
+  
+  .AdminLabel {
+    display: block;
+    margin-bottom: 5px;
+    font-family: var(--FontRoboto);
+
+  }
+  
+  .AdminInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .AdminButtons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .AdminLoginButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .AdminResetButton {
+    background-color: #ccc;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .AdminLoginButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .AdminResetButton:hover {
+    background-color: #999;
+  }
+  
+
+
+
+.IconContainer {
+    display: flex;
+    margin-right: 50px;
+    // background-color: pink;
+    // align-items: center;
+    
+    .MyIcon {
+        width: 30px;
+    
+    }
+  
+    @media (max-width: 768px) {
+        display: flex;
+        margin-right: 50px;
+    }
+  }
+  

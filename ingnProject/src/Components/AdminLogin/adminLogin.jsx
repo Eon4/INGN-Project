@@ -1,14 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
-import style from '../../Components/AdminLogin/adminLogin';
+import style from '../../Components/AdminLogin/adminLogin.module.scss';
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { FaUser } from 'font-awesome';
+// import { useHistory } from 'react-router-dom';
 
 
 const AdminLogin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const history = useHistory();
+  // const history = useHistory();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -21,7 +20,7 @@ const AdminLogin = () => {
 
     localStorage.setItem('adminToken', token);
 
-    history.push('/admin/dashboard');
+    // history.push('/admin/dashboard');
   };
 
   return (

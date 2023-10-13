@@ -1,10 +1,10 @@
 
 import React from 'react';
 import Navigation from '../Components/Navigation/nav';
-// import AdminIcon from '../Components/AdminLogin/adminIcon';
 import {Footer} from '../Components/Footer/footer'
 import { Outlet } from 'react-router-dom';
 import { BurgerMenu } from "../Components/Navigation/mobileNav";
+// import AdminIcon from '../Components/AdminLogin/adminIcon';
 
 const MainLayout = () => {
   return (
