@@ -14,6 +14,7 @@ import Society from './Pages/Society/society';
 import { OneArticle } from "./Pages/ArticlePage/OneArticlePage";
 import  {NotFoundPage}  from "./Pages/NotFoundPage/NotFoundPage";
 import AdminPage from './Pages/AdminPage/adminPage';
+import { AccessKeyProvider } from "./utils/UserContext";
 
 
 
@@ -21,6 +22,8 @@ const queryClient = new QueryClient();
 
 const App = () => {
   return (
+    <AccessKeyProvider>
+
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
@@ -43,6 +46,8 @@ const App = () => {
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
+    </AccessKeyProvider>
+
   );
 };
 

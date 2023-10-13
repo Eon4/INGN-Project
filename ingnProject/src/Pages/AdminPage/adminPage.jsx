@@ -1,18 +1,28 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import style from '../../Components/AdminLogin/adminLogin.module.scss';
+import { useNavigate } from 'react-router-dom';
+import { useAccessKey } from "../../utils/UserContext";
 
 const AdminPage = () => {
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const { setAccessKey } = useAccessKey();
+  const navigate = useNavigate();
 
-  const handleLogin = () => {
-    // Login logic here (e.g., validate username and password)
-    if (username === 'admin' && password === 'password') {
-      alert('Logged in successfully!');
-    } else {
-      alert('Invalid username or password');
-    }
+    //Undersøger om brugernavn og password er korrekt og sender hhv en til forsiden eller viser en alert med error
+    const handelSubmit = (e) => {
+      e.preventDefault();
+      if(username === "admin" && password === "1234") {
+          setAccessKey("valid");
+          navigate('/');
+          alert ("Yay! Du er logget ind");
+      } else {
+          alert("Login mislykkes");
+      }
   };
+
+  console.log(handelSubmit)
 
   const handleReset = () => {
     setUsername('');
@@ -20,41 +30,33 @@ const AdminPage = () => {
   };
 
   return (
-    <div className={style.AdminPageContainer}>
-      <h2 className={style.AdminHeading}>Admin Login</h2>
-      <div className={style.AdminForm}>
-        <label htmlFor="username" className={style.AdminLabel}>
-          Username:
-        </label>
+    <section className={style.container}>
+      <p className={style.title}>ADMIN LOGIN</p>
+      <form className={style.form} onSubmit={handelSubmit}>
         <input
           type="text"
-          id="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          className={style.AdminInput}
+          className={style.input}
+          placeholder="Username"
         />
-
-        <label htmlFor="password" className={style.AdminLabel}>
-          Password:
-        </label>
         <input
           type="password"
-          id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className={style.AdminInput}
+          className={style.input}
+          placeholder="Password"
         />
-
-        <div className={style.AdminButtons}>
-          <button onClick={handleLogin} className={style.AdminLoginButton}>
+        <div className={style.buttonContainer}>
+          <button type="submit" className={style.button}>
             Login
           </button>
-          <button onClick={handleReset} className={style.AdminResetButton}>
+          <button type="button" className={style.resetButton} onClick={handleReset}>
             Reset
           </button>
         </div>
-      </div>
-    </div>
+      </form>
+    </section>
   );
 };
 
