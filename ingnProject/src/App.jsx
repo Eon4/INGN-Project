@@ -16,14 +16,11 @@ import  {NotFoundPage}  from "./Pages/NotFoundPage/NotFoundPage";
 import AdminPage from './Pages/AdminPage/adminPage';
 import { AccessKeyProvider } from "./utils/UserContext";
 
-
-
 const queryClient = new QueryClient();
 
 const App = () => {
   return (
-    <AccessKeyProvider>
-
+  <AccessKeyProvider>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
@@ -35,19 +32,17 @@ const App = () => {
                 <Route path="/national" element={<National />} />
                  <Route path="/international" element={<International />} />
                   <Route path="/technology" element={<Technology />} />
-                 <Route path="/sport" element={<Sport />} />
-                <Route path="/politics" element={<Politics />} />
-              <Route path="/society" element={<Society />} />
-             <Route path="/article/:id" element={<OneArticle />} />
-            <Route path="/*" element={<NotFoundPage />} />
+                   <Route path="/sport" element={<Sport />} />
+                 <Route path="/politics" element={<Politics />} />
+                 <Route path="/society" element={<Society />} />
+               <Route path="/article/:id" element={<OneArticle />} />
+              <Route path="/*" element={<NotFoundPage />} />
             <Route path="/adminpage" element={<AdminPage />} />
-
           </Route>
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
-    </AccessKeyProvider>
-
+   </AccessKeyProvider>
   );
 };
 

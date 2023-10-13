@@ -4,7 +4,6 @@ import style from '../Navigation/nav.module.scss'
 import { Link } from 'react-router-dom';
 import AdminIcon from '../AdminLogin/adminIcon';
 
-
  export const Navigation = () => {
   return (
     <nav className ={style.topnavigation}>
@@ -22,8 +21,9 @@ import AdminIcon from '../AdminLogin/adminIcon';
         <li><a href="/politics">Politik</a></li>
         <li><a href="/society">Samfund</a></li>
       </ul>
-      <div className={style.Container}>  <AdminIcon/>
-</div>
+      <div className={style.Container}>  
+      <AdminIcon/>
+     </div>
     </nav>
     
   );

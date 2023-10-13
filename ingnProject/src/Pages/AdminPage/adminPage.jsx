@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import style from '../../Components/AdminLogin/adminLogin.module.scss';
+import style from '../AdminPage/adminPage.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { useAccessKey } from "../../utils/UserContext";
 
@@ -10,7 +10,7 @@ const AdminPage = () => {
   const { setAccessKey } = useAccessKey();
   const navigate = useNavigate();
 
-    //Undersøger om brugernavn og password er korrekt og sender hhv en til forsiden eller viser en alert med error
+    // Checking whether the username and password are correct and sends one back to the homepage or displays an alert with an error.
     const handelSubmit = (e) => {
       e.preventDefault();
       if(username === "admin" && password === "1234") {
@@ -21,8 +21,6 @@ const AdminPage = () => {
           alert("Login mislykkes");
       }
   };
-
-  console.log(handelSubmit)
 
   const handleReset = () => {
     setUsername('');
