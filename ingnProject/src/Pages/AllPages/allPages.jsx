@@ -3,6 +3,7 @@ import { request } from "graphql-request";
 import { Link } from "react-router-dom";
 import { getAll } from "../../Queries/AllPages";
 import style from '../../Pages/AllPages/allPages.module.scss';
+import { useAccessKey } from "../../utils/UserContext";
 
 const AllPages = () => {
 
@@ -10,6 +11,9 @@ const AllPages = () => {
     queryKey: ["giveMeAll"],
     queryFn: async () => request(import.meta.env.VITE_PUBLIC_URL_ID, getAll),
   });
+
+  const { accessKey } = useAccessKey();
+
 
   console.log(data);
 
@@ -61,6 +65,8 @@ const AllPages = () => {
               </p>
               <Link to={`/article/${item.id}`}>Læs mere</Link>
             </div>
+            {accessKey ? (
+                <button className={style.RedigerHer}>Rediger</button> ): null } 
             <img src={item.image.url} alt={item.descriptionOfImage} />
           </article>
         );

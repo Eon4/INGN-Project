@@ -66,6 +66,22 @@
   }
 }
 
+.RedigerHer{
+  color: rgb(255, 255, 255);
+  font-family: var(--FontRoboto);
+  background-color: var(--Red);
+  // font-weight:bolder;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 4px;
+  cursor: pointer;
+
+}
+.RedigerHer:hover{
+  background-color: rgb(53, 155, 35);
+  transition: .2s;
+}
+
 
 // Mobile version 
 $mobile: 500px;
