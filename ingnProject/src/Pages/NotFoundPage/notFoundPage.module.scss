@@ -1,6 +1,7 @@
 
 
 .notFound {
+  margin-top: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,5 +18,9 @@
         
         color: var(--blackEye);
         padding-bottom: 20px;
+        color: blue;
+      }
+      a:hover{
+        color: rgb(0, 140, 255);
       }
 }
